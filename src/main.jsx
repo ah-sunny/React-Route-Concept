@@ -10,6 +10,7 @@ import Home from './Component/Home/Home';
 import Main from './Component/Main/HomePage';
 
 import DetailsOneUSer from './Component/Contact/DetailsOneUSer';
+import ErrorPage from './Component/ErrorPage/ErrorPage';
 import DetailsMeal from './Component/MealDB/DetailsMeal';
 import MealDB from './Component/MealDB/MealDB';
 import './index.css';
@@ -18,10 +19,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path:'/home',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path : '/user',
